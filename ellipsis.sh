@@ -2,14 +2,21 @@
 #
 # shinzui/dot-home ellipsis package
 
-pkg.install() {
-  install_brew_packages
-
+pkg.link() {
   readonly files=(gemrc pryrc psqlrc)
 
   for file in "${files[@]}"; do
     fs.link_file "$file"
   done
+}
+
+pkg.install() {
+  
+  if [ "$(os.platform)" = 'osx' ]; then
+    install_brew_packages
+
+    copy_fonts
+  fi
 }
 
 install_brew_packages() {
@@ -21,6 +28,10 @@ install_brew_packages() {
   /usr/local/opt/fzf/install
 
   brew install postgresql rethinkdb redis ruby-build node nsq
+}
+
+copy_fonts() {
+  cp "$PKG_PATH/fonts/Menlo-for-Powerline/*.ttf" ~/Library/Fonts/
 }
 
 # pkg.push() {
