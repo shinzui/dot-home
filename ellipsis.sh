@@ -31,7 +31,7 @@ install_brew_packages() {
 }
 
 copy_fonts() {
-  cp "$PKG_PATH/fonts/Menlo-for-Powerline/*.ttf" ~/Library/Fonts/
+  cp "$PKG_PATH/fonts/Menlo-for-Powerline/"*.ttf ~/Library/Fonts/
 }
 
 # pkg.push() {
