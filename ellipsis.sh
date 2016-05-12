@@ -11,18 +11,19 @@ pkg.link() {
 }
 
 pkg.install() {
-  
+
   if [ "$(os.platform)" = 'osx' ]; then
     install_brew_packages
 
     copy_fonts
   fi
+
 }
 
 install_brew_packages() {
   brew update
   brew install fasd shellcheck fzf jq zsh bash bash-completion exiftool ssh-copy-id the_silver_searcher tmux imagemagick git git-extras \
-    reattach-to-user-namespace
+    reattach-to-user-namespace shellcheck 
 
   #install fzf's shell extensions
   /usr/local/opt/fzf/install
