@@ -13,4 +13,4 @@ fi
 export ELLIPSIS_USER="shinzui"
 curl -sL ellipsis.sh | sh
 
-"$HOME/.ellipsis/bin/ellipsis" install home zsh vim tmux
+"$HOME/.ellipsis/bin/ellipsis" install home zsh vim tmux node
