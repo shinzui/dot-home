@@ -16,6 +16,7 @@ pkg.install() {
     install_brew_packages
 
     copy_fonts
+    sudo atsutil databases -remove
   fi
 
 }
@@ -23,7 +24,7 @@ pkg.install() {
 install_brew_packages() {
   brew update
   brew install fasd shellcheck fzf jq zsh ssh-copy-id the_silver_searcher tmux git git-extras \
-    reattach-to-user-namespace shellcheck md5sha1sum mas gpg
+    reattach-to-user-namespace shellcheck md5sha1sum mas gpg exa
 
   #install fzf's shell extensions
   /usr/local/opt/fzf/install
