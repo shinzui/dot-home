@@ -24,7 +24,7 @@ pkg.install() {
 install_brew_packages() {
   brew update
   brew install fasd shellcheck fzf jq zsh ssh-copy-id the_silver_searcher tmux git git-extras \
-    reattach-to-user-namespace shellcheck md5sha1sum mas gpg exa
+    reattach-to-user-namespace shellcheck md5sha1sum mas gpg exa jid pet
 
   #install fzf's shell extensions
   /usr/local/opt/fzf/install
