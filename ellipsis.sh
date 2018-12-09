@@ -3,7 +3,7 @@
 # shinzui/dot-home ellipsis package
 
 pkg.link() {
-  readonly files=(gemrc pryrc psqlrc)
+  readonly files=(gemrc pryrc psqlrc rgignore)
 
   for file in "${files[@]}"; do
     fs.link_file "$file"
