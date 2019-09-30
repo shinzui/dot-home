@@ -24,7 +24,7 @@ pkg.install() {
 install_brew_packages() {
   brew update
   brew install fasd shellcheck fzf jq zsh ssh-copy-id the_silver_searcher tmux git git-extras \
-    reattach-to-user-namespace shellcheck md5sha1sum mas gpg exa jid pet
+    reattach-to-user-namespace shellcheck md5sha1sum mas gpg exa jid pet yq
 
   brew cask install minikube
 
